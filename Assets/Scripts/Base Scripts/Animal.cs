@@ -47,13 +47,13 @@ public class Animal : MonoBehaviour
     public virtual void Jump(float force)
     {
         Debug.Log($"Animal {gameObject.name} jumps on {force} meters");
-
-        JumpLogger(GetComponent<Animal>()); // some abstraction
     }
 
     public virtual void Jump(Vector3 direction)
     {
         Debug.Log($"Animal {gameObject.name} jumps in {direction} direcrion");
+
+        JumpLogger(GetComponent<Animal>()); // some abstraction
     }
 
     private void JumpLogger(Animal animal)
